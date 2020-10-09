@@ -1,0 +1,5 @@
+= traefik
+
+traefik is a Commodore component to manage traefik.
+
+See the xref:references/parameters.adoc[parameters] reference for further details.

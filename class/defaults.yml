@@ -1,0 +1,3 @@
+parameters:
+  traefik:
+    namespace: syn-traefik
