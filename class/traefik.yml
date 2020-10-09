@@ -1,5 +1,11 @@
 parameters:
   kapitan:
+    dependencies:
+      - type: helm
+        output_path: dependencies/traefik/helmcharts/traefik
+        source: https://helm.traefik.io/traefik
+        version: ${traefik:charts:traefik}
+        chart_name: traefik
     compile:
       - input_paths:
           - traefik/component/app.jsonnet
@@ -9,3 +15,12 @@ parameters:
           - traefik/component/main.jsonnet
         input_type: jsonnet
         output_path: traefik/
+      - output_path: traefik/10_traefik_helmchart
+        input_type: helm
+        output_type: yaml
+        input_paths:
+          - traefik/helmcharts/traefik
+        helm_values: ${traefik:helmValues}
+        helm_params:
+          release_name: traefik
+          namespace: '${traefik:namespace}'

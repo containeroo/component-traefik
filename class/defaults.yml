@@ -1,3 +1,7 @@
 parameters:
   traefik:
+    extraYAMLs: []
     namespace: syn-traefik
+    charts:
+      traefik: 9.5.0
+    helmValues: []

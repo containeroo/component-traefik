@@ -7,4 +7,6 @@ local params = inv.parameters.traefik;
 
 // Define outputs below
 {
+  namespace: kube.Namespace(params.namespace),
+  extraYAMLs: params.extraYAMLs,
 }
