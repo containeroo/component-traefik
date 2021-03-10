@@ -22,6 +22,9 @@ parameters:
       - type: https
         source: https://raw.githubusercontent.com/traefik/traefik-helm-chart/master/traefik/crds/traefikservices.yaml
         output_path: dependencies/traefik/manifests/crds/traefikservices-crd.yaml
+      - type: https
+        source: https://raw.githubusercontent.com/traefik/traefik-helm-chart/master/traefik/crds/serverstransports.yaml
+        output_path: dependencies/traefik/manifests/crds/serverstransports-crd.yaml
       - type: helm
         output_path: dependencies/traefik/helmcharts/traefik
         source: https://helm.traefik.io/traefik
