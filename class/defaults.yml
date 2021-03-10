@@ -3,5 +3,5 @@ parameters:
     extraYAMLs: []
     namespace: syn-traefik
     charts:
-      traefik: 9.4.3
+      traefik: 9.16.2
     helmValues: {}
